@@ -1,0 +1,35 @@
+{
+  "name": "antdaterangepickerjs",
+  "widgetName": "AntDateRangePickerJS",
+  "version": "1.0.0",
+  "description": "My widget description",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Nikkey",
+  "engines": {
+    "node": ">=12"
+  },
+  "config": {
+    "projectPath": "../..//",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server --open",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.14.0"
+  },
+  "dependencies": {
+    "antd": "^4.16.8",
+    "classnames": "^2.2.6",
+    "moment": "^2.29.1"
+  }
+}

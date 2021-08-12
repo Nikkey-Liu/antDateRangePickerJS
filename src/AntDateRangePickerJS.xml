@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.antdaterangepickerjs.AntDateRangePickerJS" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Ant Date Range Picker JS</name>
+    <description>My widget description</description>
+    <icon> iVBORw0KGgoAAAANSUhEUgAAAGEAAABVCAIAAADWjx1PAAAAAXNSR0IArs4c6QAA AARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAASdEVYdFNvZnR3 YXJlAEdyZWVuc2hvdF5VCAUAAAM5SURBVHhe7dzLS1RhGMfx/ozKSoyCqIjCiBYh BUEX3EQZGIUgRNsI0oIupKhdLFIzsouCUlnUaGpFYDNl3qNFu4gCKxKkTYug3fv2 TErOeSbPb16ayzn0g89C5HnPO+freGZ0dOZdGjfkj40wNsLYCGMjLLONSiJmfatd e3PGjk57ZlDPODkaNZvaZw8oZIuaIT2WXpltJIEWNNj5l2csabLHYnrGSfljs/zq 7AGFbHFqQI+lV2Ybydc58XxERVTPOCnrNcu8jWSLEy/1WHqFrVEPGyFshAW90blR Uxkzpd1mZ6fddjclBc2e8xFFHXrGiSzPb/IcUBptvaPH5lLeZ46/MBdG9an5c2h0 8IkpvGWXNscfnlKU+KA2bXGjnnGljul0QLkPbmiz8pWuH9Nn58Oh0eYOu6jRc/vC KK/B7u0ytcP67Hw4NFqXdHEJKXkqW+3yVNahUfIFOKTkwlTFRv6y2uhwv60d8bPm hvMSf+V9Vv0sIltUxPRYouQlWW0kt+DNN/vu+5zkoVot6fmoZ5ycfmVXXPMcUH5e ezahxxIlL8l2I7kRkz/ntOW2XvL8s55xUjX4l0aDk3osUfISNtKC3mh3xPOUamOb HfI9H6jlrb7G7XpgX0/psURBbzQ+ZaNf4vedaRJo4oeecSLbDXydPaCQLT75HjPo jYKAjTA2wtgIYyMs940evrddHwKtMpbTRvJUpbA16Fa22Dzvr72y2iik2AhjI4yN sKw2KmqP75d+nb+l8sk/fJeol7DkM9lrtK/bnBwwsl+Q7X+kX7bMaqOyXnN2RI8F TfJLu2yksRHGRhgbYWyEsRHGRhgbYWyEsRHGRhgbYWyEsRHGRhgbYWyEsRHGRhgb YWyEsRHGRhgbYWyEsRHGRhgbYWyE5bhR8T17oCf+/hZx8oH6OBX/sjY1JZGcNipo jv83ePAt9P67e1YbhRQbYRlsVHzf5l/R+4WRXEOdHmocGh16alZf19/bobOqJf5e Ghcz9F4adSPmSL/ZEzHbff6+NdhKu01F1JzP3HuyiPoxUzNsqpP+djUs6obd7kHT 3Br9n9gIYyOMjTA2wtgIYyOMjTA2wtgIYyNk3PwCsaZtr7b6OvEAAAAASUVORK5C YII=</icon>
+    <properties>
+        <propertyGroup caption="UI">
+            <property key="ShowBorder" type="boolean" defaultValue="true">
+                <caption>Show Border</caption>
+                <description>Bordered</description>
+            </property>
+            <property key="RPWidgetsize" type="enumeration" defaultValue="default">
+                <caption>Size</caption>
+                <description>You can change size here</description>
+                <enumerationValues>
+                    <enumerationValue key="default">Default</enumerationValue>
+                    <enumerationValue key="large">Large</enumerationValue>
+                    <enumerationValue key="small">Small</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="General">
+            <!-- 创建Pluggable默认属性 -->
+            <!-- <property key="sampleText" type="string" required="false">
+                <caption>Default value</caption>
+                <description>Sample text input</description>
+            </property> -->
+            <!-- 自定义属性 -->
+            <property key="DateFormat" type="string" required="false">
+                <caption>Custom Date Format</caption>
+                <description>Default is  (Date Format)</description>
+            </property>
+
+            <property key="ShowTimeValue" type="boolean" defaultValue="false">
+                <caption>ShowTime</caption>
+                <description>show time format: 'HH:mm:ss'</description>
+            </property>
+            <property key="PickerData" type="enumeration" defaultValue="date">
+                <caption>Pick type</caption>
+                <description>Pick Date type(!'week' and 'quarter' type Select string type Attribute as StartDate and EndDate )</description>
+                <enumerationValues>
+                    <enumerationValue key="date">date</enumerationValue>
+                    <enumerationValue key="week">week</enumerationValue>
+                    <enumerationValue key="month">month</enumerationValue>
+                    <enumerationValue key="quarter">quarter</enumerationValue>
+                    <enumerationValue key="year">year</enumerationValue>
+                </enumerationValues>
+            </property>
+
+
+            <property key="StartDate" type="attribute">
+                <caption>StartDate</caption>
+                <description>StartDate Select</description>
+                <attributeTypes>
+                    <attributeType name="DateTime"/>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="EndDate" type="attribute">
+                <caption>EndDate</caption>
+                <description>EndDate Select</description>
+                <attributeTypes>
+                    <attributeType name="DateTime"/>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="DisableStartDate" type="boolean" defaultValue="false">
+                <caption>Disable StartDate</caption>
+                <description>If true suggest input default Startdate value.
+                </description>
+            </property>
+             <property key="defaultStartdate" type="string" required="false">
+                <caption>default Startdate</caption>
+                <description>Default is null, input example:2019-11-22</description>
+            </property>
+            <property key="DisableEndDate" type="boolean" defaultValue="false">
+                <caption>Disable EndDate</caption>
+                <description>If true suggest input default Enddate value.</description>
+            </property>
+             <property key="defaultEnddate" type="string" required="false">
+                <caption>default Enddate</caption>
+                <description>Default is  null, input example:2019-11-22</description>
+            </property>
+
+            <systemProperty key="Label"/>
+            <systemProperty key="Name"/>
+            <systemProperty key="Visibility"/>
+            <systemProperty key="Editability"/>
+        </propertyGroup>
+        <propertyGroup caption="EventSetting">
+            <property key="onClickChangeAction" type="action">
+                <caption>On click Date Change</caption>
+                <description>Action to be performed when Date is Changed</description>
+            </property>
+            <!-- <property key="onClickEnterAction" type="action">
+                <caption>On click when Enter or input Date</caption>
+                <description>Action to be performed when Date is inputting</description>
+            </property> -->
+            <property key="onClickLeaveAction" type="action">
+                <caption>On click leave Date Picker</caption>
+                <description>Action to be performed when Date Picker is closed</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
