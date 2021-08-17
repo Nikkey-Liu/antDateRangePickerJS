@@ -80,7 +80,7 @@ export default class AntDateRangePickerJS extends Component {
         const { StartDate } = this.props;
         const { EndDate } = this.props;
         const { onClickChangeAction } = this.props;
-
+    
         if (this.pickerAttribute === "week" || this.pickerAttribute === "quarter") {
             StartDate.setValue(dateStrings[0]);
             EndDate.setValue(dateStrings[1]);
